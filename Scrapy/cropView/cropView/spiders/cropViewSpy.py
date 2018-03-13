@@ -15,7 +15,7 @@ from cropView.items import CropviewItem
 class CropViewSpider(scrapy.Spider):
 
     name = "cropviewspider"
-    start_urls = [ "http://ecocrop.fao.org/ecocrop/srv/en/cropView?id=289"]
+    start_urls = [ "http://ecocrop.fao.org/ecocrop/srv/en/cropListDetails?code=&relation=beginsWith&name=&quantity="]
     custom_settings = {
     # specifies exported fields and order
     'FEED_EXPORT_FIELDS': ["CropID","SciName", "Info"],
@@ -23,12 +23,11 @@ class CropViewSpider(scrapy.Spider):
     
     def parse(self, response):      
   
-           #for list in response.css('.serviceLink'):
-                 #link = list.css('::attr(onclick)')
-                 #id = re.findall(r'\d+', link.extract()[0])[0]
+            for list in response.css('.serviceLink'):
+                 link = list.css('::attr(onclick)')
+                 id = re.findall(r'\d+', link.extract()[0])[0]
                                                  
-                 #yield response.follow("http://ecocrop.fao.org/ecocrop/srv/en/cropView?id=" + id, self.parse_data)
-            yield response.follow("http://ecocrop.fao.org/ecocrop/srv/en/cropView?id=289", self.parse_data)    
+                 yield response.follow("http://ecocrop.fao.org/ecocrop/srv/en/cropView?id=" + id, self.parse_data)
             
     def parse_data(self, response):
         
