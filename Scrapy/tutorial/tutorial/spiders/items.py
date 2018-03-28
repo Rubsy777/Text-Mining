@@ -1,0 +1,66 @@
+# -*- coding: utf-8 -*-
+
+# Define here the models for your scraped items
+#
+# See documentation in:
+# http://doc.scrapy.org/en/latest/topics/items.html
+
+import scrapy
+
+
+class CffItem(scrapy.Item):
+    
+    CropID = scrapy.Field()    
+    SciName = scrapy.Field()
+    LifeForm = scrapy.Field()
+    Category = scrapy.Field()
+    EcocropPhys = scrapy.Field()
+    EcocropHabit = scrapy.Field()
+    LifeSpan = scrapy.Field()
+    PlantAttributes = scrapy.Field()
+    SoilDepthOptimal = scrapy.Field()
+    SoilDepthAbsolute = scrapy.Field()
+    TemperatureOptimalMin = scrapy.Field()
+    TemperatureOptimalMax = scrapy.Field()
+    TemperatureAbsoluteMin = scrapy.Field()
+    TemperatureAbsoluteMax = scrapy.Field()
+    SoilTextureOptimal = scrapy.Field()
+    SoilTextureAbsolute = scrapy.Field()
+    RainOptimalMin = scrapy.Field()
+    RainOptimalMax = scrapy.Field()
+    RainAbsoluteMin = scrapy.Field()
+    RainAbsoluteMax = scrapy.Field()
+    SoilFertilityOptimal = scrapy.Field()
+    SoilFertilityAbsolute = scrapy.Field()
+    LatitudeOptimalMin = scrapy.Field()
+    LatitudeOptimalMax = scrapy.Field()
+    LatitudeAbsoluteMin = scrapy.Field()
+    LatitudeAbsoluteMax = scrapy.Field()
+    SoilToxicityOptimal = scrapy.Field()
+    SoilToxicityAbsolute = scrapy.Field()
+    AltitudeOptimalMin = scrapy.Field()
+    AltitudeOptimalMax = scrapy.Field()
+    AltitudeAbsoluteMin = scrapy.Field()
+    AltitudeAbsoluteMax = scrapy.Field()
+    SoilSalinityOptimal = scrapy.Field()
+    SoilSalinityAbsolute = scrapy.Field()
+    SoilPHOptimalMin = scrapy.Field()
+    SoilPHOptimalMax = scrapy.Field()
+    SoilPHAbsoluteMin = scrapy.Field()
+    SoilPHAbsoluteMax = scrapy.Field()
+    SoilDrainageOptimal = scrapy.Field()
+    SoilDrainageAbsolute = scrapy.Field()
+    LightIntensityOptimalMin = scrapy.Field()
+    LightIntensityOptimalMax = scrapy.Field()
+    LightIntensityAbsoluteMin = scrapy.Field()
+    LightIntensityAbsoluteMax = scrapy.Field()
+    ClimateZone = scrapy.Field()
+    PhotoPeriod = scrapy.Field()
+    KillingTempRest = scrapy.Field()
+    KillingTempEarlyGrowth = scrapy.Field()
+    AbioticToler = scrapy.Field()
+    AbioticSuscept = scrapy.Field()
+    IntroductionRisks = scrapy.Field()
+    ProductSystem = scrapy.Field()
+    CropCycleMin = scrapy.Field()
+    CropCycleMax = scrapy.Field()

@@ -1,0 +1,2 @@
+D:\Nottingham\Courses\Group Project\Scrapy\Scrapy\tutorial\tutorial\spiders>
+scrapy crawl cffspider -o cff.csv
